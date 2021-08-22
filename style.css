@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root{
+  --main-background:hsl(222, 26%, 31%);
+  --toogle-keypad-background:hsl(223, 31%, 20%);
+  --screen-background:hsl(224, 36%, 15%);
+  --key-background:hsl(225, 21%, 49%);
+  --key-shadow:hsl(224, 28%, 35%);
+  --red:hsl(6, 63%, 50%);
+  --red-shadow:hsl(6, 70%, 34%);
+  --verydarkgreyishblue-text:hsl(221, 14%, 31%);
+  --white-text:hsl(0, 0, 100%);
+  --Light-grayish-orange: hsl(30, 25%, 89%);
+  --Grayish-orange: hsl(28, 16%, 65%);
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+  /* border:1px solid red; */
+}
+.main-body{
+  background-color: var(--main-background);
+  width:375px;
+  height:667px;
+  margin: 0 auto;
+  padding-top:25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  color:white;
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+.header{
+  display: flex;
+  object-fit: cover;  
+}
+.calc{
+  flex: 1;
+  position: relative;
+  top:5px;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+.theme{
+  margin-right: 30px;
+  position: relative;
+  top:33px;  
+}
+.header-text{
+
+}
+.toggle{
+  word-spacing:10px;
+  text-align: center;
+}
+.toggle-icon{
+  position: absolute;
+  width:19px;
+  height: 19px;
+  background-color: var(--red);
+  border-radius: 50%;
+  top:5px;
+  left: 5px;
+}
+.toggle-box{
+  position: relative;
+  background-color: var(--toogle-keypad-background);
+  margin-top:5px;
+  border-radius: 20px;
+  width:78px;
+  height:28px;
+}
+/* textarea */
+.textarea{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.8rem;
+  background-color: var(--screen-background);
+  padding:30px 20px 30px 0;
+  width:324px;
+  height:100px;
+  margin:25px 0 20px 0;
+}
+/* keypads */
+.keyboard{
+  background-color: var(--toogle-keypad-background);
+  display:flex;
+  flex-wrap: wrap;
+  padding:20px;
+  justify-content: space-between;
+  }
+.keypad{
+  background-color: var(--Light-grayish-orange);
+  box-shadow: 0 5px 2px 0 var(--Grayish-orange);
+  border:none;
+  width:60px;
+  height:60px;
+  margin-bottom:15px;
+  color:var(--verydarkgreyishblue-text);
+  position: relative;
+  
+}
+.lastkey{
+  width:132px;
+  height:60px;
+  position: relative;
+}
+span{
+  font-size:1.8rem;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.reset, .del{
+  background-color: var(--key-background);
+  box-shadow: 0 5px 2px 0 var(--key-shadow);
+}
+.text{
+  font-size:1.3rem;
+  color:white;
+}
+.equalto{
+  background-color: var(--red);
+  box-shadow: 0px 5px 2px 0 var(--red-shadow);
+}
+.keyboard .keypad, .keyboard .lastkey {
+  border-radius: 5px;
+}
+.keyboard, .textarea{
+  border-radius: 10px;
+}
