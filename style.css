@@ -72,17 +72,18 @@
 }
 /* textarea */
 .textarea{
-  display: flex;
-  flex-direction: row-reverse;
+  color: white;
+  text-align: right;
   font-size: 2.8rem;
   background-color: var(--screen-background);
   padding:30px 20px 30px 0;
-  width:324px;
+  width:100%;
   height:100px;
   margin:25px 0 20px 0;
 }
 /* keypads */
 .keyboard{
+  width: 100%;
   background-color: var(--toogle-keypad-background);
   display:flex;
   flex-wrap: wrap;
@@ -106,7 +107,8 @@
   position: relative;
 }
 span{
-  font-size:1.8rem;
+  font-size:2.5rem;
+  font-weight: bold;
   position: absolute;
   top:50%;
   left:50%;
@@ -115,6 +117,7 @@ span{
 .reset, .del{
   background-color: var(--key-background);
   box-shadow: 0 5px 2px 0 var(--key-shadow);
+  border: none;
 }
 .text{
   font-size:1.3rem;
@@ -123,6 +126,7 @@ span{
 .equalto{
   background-color: var(--red);
   box-shadow: 0px 5px 2px 0 var(--red-shadow);
+  border: none;
 }
 .keyboard .keypad, .keyboard .lastkey {
   border-radius: 5px;

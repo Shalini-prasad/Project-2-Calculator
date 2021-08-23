@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
-  <title>Calculator</title>
+  <title>Calc</title>
 </head>
 <body>
   <div class="main-body">
@@ -15,37 +15,31 @@
       <div class="toggle header-text">1  2  3<div class="toggle-box"><div class="toggle-icon"></div></div>
     </header>
     <main>
-      <div class="textarea" contenteditable="true"></div>
+      <input type="text" name ="calc" id="calcScreen" class="textarea"> 
     </main>
     <section>
       <div class="keyboard">
-      <button class="keypad seven"><span>7</span></button>
-      <div class="keypad eight"><span>8</span></div>
-      <div class="keypad nine"><span>9</span></div>
-      <div class="keypad del"><span class="text">DEL</span></div>
-      <div class="keypad four"><span>4</span></div>
-      <div class="keypad five"><span>5</span></div>
-      <div class="keypad six"><span>6</span></div>
-      <div class="keypad plus"><span>+</span></div>
-      <div class="keypad one"><span>1</span></div>
-      <div class="keypad two"><span>2</span></div>
-      <div class="keypad three"><span>3</span></div>
-      <div class="keypad minus"><span>-</span></div>
-      <div class="keypad dot"><span>.</span></div>
-      <div class="keypad zero"><span>0</span></div>
-      <div class="keypad slash"><span>/</span></div>
-      <div class="keypad mul"><span>x</span></div>
-      <div class="lastkey reset"><span class="text">RESET</span></div>
-      <div class="lastkey equalto"><span>=</span></div>
-      </div>
+      <button onclick="calcScreen.value+='7'" class="keypad seven"><span>7</span></button>
+      <button onclick="calcScreen.value+='8'" class="keypad eight"><span>8</span></button>
+      <button onclick="calcScreen.value+='9'" class="keypad nine"><span>9</span></button>
+      <button class="keypad del"><span class="text">DEL</span></button>
+      <button onclick="calcScreen.value+='4'" class="keypad four"><span>4</span></button>
+      <button onclick="calcScreen.value+='5'" class="keypad five"><span>5</span></button>
+      <button onclick="calcScreen.value+='6'" class="keypad six"><span>6</span></button>
+      <button onclick="calcScreen.value+='+'" class="keypad plus"><span>+</span></button>
+      <button onclick="calcScreen.value+='1'" class="keypad one"><span>1</span></button>
+      <button onclick="calcScreen.value+='2'" class="keypad two"><span>2</span></button>
+      <button onclick="calcScreen.value+='3'" class="keypad three"><span>3</span></button>
+      <button onclick="calcScreen.value+='-'" class="keypad minus"><span>-</span></button>
+      <button onclick="calcScreen.value+='.'" class="keypad dot"><span>.</span></button>
+      <button onclick="calcScreen.value+='0'" class="keypad zero"><span>0</span></button>
+      <button onclick="calcScreen.value+='/'" class="keypad slash"><span>/</span></button>
+      <button onclick="calcScreen.value+='*'" class="keypad mul"><span>x</span></button>
+      <button onclick="calcScreen.value =''" class="lastkey reset"><span class="text">RESET</span></button>
+      <button class="lastkey equalto"><span>=</span></button>
+      </button>
     </section>
   </div>
-
-
-
-
-
-
-
+<script src="main.js"></script>
 </body>
 </html>
