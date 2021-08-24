@@ -20,8 +20,7 @@
   box-sizing: border-box;
   /* border:1px solid red; */
 }
-
-.main-body {
+.main-body {  
   font-size: 32px;
   background-color: var(--main-background);
   width: 375px;
@@ -29,14 +28,17 @@
   margin: 0 auto;
   padding: 25px 25px 25px 30px;
   font-family: 'Spartan', sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px;  
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 
+}
 .header {
   display: flex;
   object-fit: cover;
 }
-
 .calc {
   flex: 1;
   position: relative;
@@ -44,25 +46,21 @@
   font-size: 2.5rem;
   padding-bottom: 20px;
 }
-
 .theme {
   margin-right: 30px;
   position: relative;
   top: 30px;
 }
-
 .toggle {
   position: relative;
   top: -15px;
 }
-
 .toggle .num {
   cursor: pointer;
   height: 32px;
   display: flex;
   justify-content: space-around;
 }
-
 .toggle-box {
   position: relative;
   background-color: var(--toogle-keypad-background);
@@ -71,7 +69,6 @@
   width: 78px;
   height: 28px;
 }
-
 .toggle-box::before {
   content: "";
   background-color: red;
@@ -81,7 +78,6 @@
   border-radius: 50%;
   top: 5px;
 }
-
 /* textarea */
 .textarea {
   border: none;
@@ -93,7 +89,6 @@
   height: 100px;
   margin: 25px 0 20px 0;
 }
-
 /* keypads */
 .keyboard {
   width: 100%;
@@ -102,23 +97,19 @@
   padding: 20px;
   justify-content: space-between;
 }
-
 .keypad {
   border: none;
   width: 60px;
   height: 60px;
   margin-bottom: 15px;
   position: relative;
-
 }
-
 .lastkey {
   border: none;
   width: 132px;
   height: 60px;
   position: relative;
 }
-
 span {
   font-size: 2.2rem;
   font-weight: bold;
@@ -127,30 +118,25 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .reset,
 .del {
   background-color: var(--key-background);
   box-shadow: 0 5px 2px 0 var(--key-shadow);
   border: none;
 }
-
 .keyboard .keypad,
 .keyboard .lastkey {
   border-radius: 5px;
 }
-
 .keyboard,
 .textarea {
   border-radius: 10px;
 }
-
 /* theme1 */
 .main-body {
   background-color: var(--main-background);
   color: white;
 }
-
 .textarea {
   background-color: var(--screen-background);
   color: white;
@@ -287,4 +273,44 @@ body.active2 .toggle-box {
 body.active2 .toggle-box::before {
   background-color: hsl(177, 92%, 70%);;
   left: 54px;
+}
+
+/* responsive */
+@media screen and (min-width:1450px) {
+  .main-body{
+    width: 1440px;
+    height:900px;
+  }
+  .container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .header, main, section{
+    width: 600px;
+    margin: 0 auto; 
+  }
+  .textarea{
+    height: 135px;
+    font-size: 3.7rem;
+  }
+  .keypad{
+    width:110px;
+    height: 65px;
+    margin-bottom: 32px;
+  }
+  .keyboard{
+    padding: 35px;
+    margin-top: 10px;
+  }
+  .lastkey{
+    width:251px;
+    height: 65px;
+    padding: 0;
+  }
+  .keyboard .keypad,
+.keyboard .lastkey {
+  border-radius: 10px;
+}
 }
