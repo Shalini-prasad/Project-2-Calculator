@@ -24,31 +24,33 @@
         </div>
     </header>
     <main>
-      <input type="text" name="calc" id="calcScreen" class="textarea">
+      <div class="textarea" id="calcscreen">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+      </div>
     </main>
     <section>
       <div class="keyboard">
-        <button onclick="calcScreen.value+='7'" class="keypad seven"><span>7</span></button>
-        <button onclick="calcScreen.value+='8'" class="keypad eight"><span>8</span></button>
-        <button onclick="calcScreen.value+='9'" class="keypad nine"><span>9</span></button>
-        <button class="keypad del"><span class="text">DEL</span></button>
-        <button onclick="calcScreen.value+='4'" class="keypad four"><span>4</span></button>
-        <button onclick="calcScreen.value+='5'" class="keypad five"><span>5</span></button>
-        <button onclick="calcScreen.value+='6'" class="keypad six"><span>6</span></button>
-        <button onclick="calcScreen.value+='+'" class="keypad plus"><span>+</span></button>
-        <button onclick="calcScreen.value+='1'" class="keypad one"><span>1</span></button>
-        <button onclick="calcScreen.value+='2'" class="keypad two"><span>2</span></button>
-        <button onclick="calcScreen.value+='3'" class="keypad three"><span>3</span></button>
-        <button onclick="calcScreen.value+='-'" class="keypad minus"><span>-</span></button>
-        <button onclick="calcScreen.value+='.'" class="keypad dot"><span>.</span></button>
-        <button onclick="calcScreen.value+='0'" class="keypad zero"><span>0</span></button>
-        <button onclick="calcScreen.value+='/'" class="keypad slash"><span>/</span></button>
-        <button onclick="calcScreen.value+='*'" class="keypad mul"><span>x</span></button>
-        <button onclick="calcScreen.value =''" class="lastkey reset"><span class="text">RESET</span></button>
-        <button class="lastkey equalto"><span>=</span></button>
-        </button>
+        <button data-number class="keypad"><span>7</span></button>
+        <button data-number class="keypad"><span>8</span></button>
+        <button data-number class="keypad nine"><span>9</span></button>
+        <button data-del id="delBtn" class="keypad del"><span class="text">DEL</span></button>
+        <button data-number class="keypad"><span>4</span></button>
+        <button data-number class="keypad"><span>5</span></button>
+        <button data-number class="keypad"><span>6</span></button>
+        <button data-operation class="keypad"><span>+</span></button>
+        <button data-number class="keypad"><span>1</span></button>
+        <button data-number class="keypad"><span>2</span></button>
+        <button data-number class="keypad"><span>3</span></button>
+        <button data-operation class="keypad"><span>-</span></button>
+        <button data-number class="keypad"><span>.</span></button>
+        <button data-number class="keypad"><span>0</span></button>
+        <button data-operation class="keypad"><span>/</span></button>
+        <button data-operation class="keypad"><span>x</span></button>
+        <div data-all-clear class="lastkey reset"><span class="text">RESET</span></div>
+        <div data-equals class="lastkey equalto"><span>=</span></div>
+      </div>
     </section>
-    </div>
   </div>
   <script src="main.js"></script>
 </body>
